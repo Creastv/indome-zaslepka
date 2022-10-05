@@ -250,7 +250,7 @@ img{
 
 @media only screen and (max-height: 600px){
 	.section{
-		padding: 180px 0 0;
+		padding: 50px 0 0;
 		height: initial!important;
 		overflow: initial!important;
 	}
