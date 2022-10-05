@@ -10,13 +10,75 @@
         // bigSectionsDestination: 'top',
         lazyLoading: true,
         // responsiveWidth: 1000,
-        responsiveHeight: 600,
-        afterResponsive: function(isResponsive){
-            //   animateAnchor: false,
+        responsiveHeight: 500,
 
-        }
-        // licenseKey: 'YOUR_KEY_HERE',
-        // // Custom Selector
-        // sectionSelector: '.section',
-        // slideSelector: '.slide',
     });
+
+   $(document).ready(function () {
+  $("#form").bootstrapValidator({
+    container: "popover",
+    message: "Pole wymagane!",
+    //live: 'submitted',
+    // feedbackIcons: {
+    //   valid: "glyphicon glyphicon-ok",
+    //   invalid: "glyphicon glyphicon-remove",
+    //   validating: "glyphicon glyphicon-refresh"
+    // },
+    // err: {
+    //   container: "tooltip"
+    // },
+    fields: {
+      firstname: {
+        message: "Pole wymagane!",
+        validators: {
+          notEmpty: {
+            message: "Pole wymagane!"
+          }
+        }
+      },
+      usluga: {
+        message: "Pole wymagane!",
+        validators: {
+          notEmpty: {
+            message: "Pole wymagane!"
+          }
+        }
+      },
+      zgoda: {
+        message: "Pole wymagane!",
+        validators: {
+          notEmpty: {
+            message: "Pole wymagane!"
+          }
+        }
+      },
+
+      telefon: {
+        message: "Pole wymagane!",
+        validators: {
+          notEmpty: {
+            message: "Pole wymagane!"
+          },
+          digits: {
+            // message: "Nieprawidłowy nr telefonu"
+          },
+          stringLength: {
+            min: 9,
+            max: 9
+            // message: "Wprowadź 9 cyfrowy nr telefonu"
+          }
+        }
+      },
+      email: {
+        validators: {
+          notEmpty: {
+            message: "Pole wymagane!"
+          },
+          emailAddress: {
+            message: "Nieprawidłowy adres e-mail"
+          }
+        }
+      }
+    }
+  });
+});

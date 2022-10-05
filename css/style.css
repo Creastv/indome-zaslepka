@@ -23,6 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 body {
 	line-height: 1;
 }
@@ -86,13 +89,6 @@ background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 
 	color:#000;
 	
 }
-.corner{
-	/* position: fixed;
-	top: 0;
-	right: 0;
-	padding: 20px; */
-}
-
 /* slide */
 .section{
 	width: 100%;
@@ -100,7 +96,7 @@ background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 
 	/* background-color: #fff; */
 }
 .container{
-	max-width: 1170px;
+	max-width: 998px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -153,6 +149,39 @@ img{
 
 /* END slide */
 
+/* form */
+form{
+	padding: 15px;
+}
+form .form-group{
+	width: 100%;
+	padding: 5px 0px;
+
+}
+form .form-group input{
+	width: 100%;
+	padding: 10px;
+	border:none;
+	border-bottom:1px solid #000
+}
+form .form-group .checkbox label{
+	display: flex;
+	align-items: flex-start;
+}
+form .form-group .checkbox input{
+	width: 24px;
+	margin: 10px;
+}
+form .form-group .zgoda-visible{
+	font-size: 10px;
+}
+/* .has-error input{
+	border-bottom:3px solid red;
+} */
+
+.section8 .row{
+	align-items:flex-start;
+}
  #footer{
 	bottom: 0;
 	padding: 100px 0 10px 0;
@@ -204,10 +233,19 @@ img{
 		display: block;
 	}
 }
-
+@media only screen and (max-width: 768px){
+	.wraper-contact{
+		flex-wrap: wrap;
+	}
+	
+}
 @media only screen and (max-width: 460px){
 	body{
 		background-size: 100%;
+	}
+	p{
+		font-size: 14px;
+		line-height: 21px;
 	}
 	.logo img {
 		width: 75px;
@@ -226,6 +264,18 @@ img{
 	col:nth-child(2){
 		order: 1;
 	}
+	.section8 {
+		padding-top: 80px;
+	}
+	.section8 .col:nth-child(1){
+		order: 1;
+	}
+	.section8 .col:nth-child(2){
+		order: 2;
+	}
+	form{
+		padding:0px;
+	}
 	.col img{
 		/* max-width: 200px; */
 		width: 60%;
@@ -239,6 +289,9 @@ img{
 	h2{
 		font-size: 28px;
 		margin-bottom: 20px;
+	}
+	#footer{
+		padding: 0;
 	}
 	#footer ul{
 		flex-wrap: wrap;
