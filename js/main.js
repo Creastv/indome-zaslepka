@@ -5,7 +5,7 @@
         slidesNavigation: true,
         navigation: true,
         animateAnchor: false,
-        loopBottom: true,
+        // loopBottom: true,
         // loopTop: true,
         // bigSectionsDestination: 'top',
         lazyLoading: true,

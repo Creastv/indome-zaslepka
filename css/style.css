@@ -281,7 +281,7 @@ form .has-error input, form .has-error select {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  border: 2px solid #000;
+  border: 1px solid #000;
   top: 170px;
 }
 #mouse-scroll .down-arrow-1 {
