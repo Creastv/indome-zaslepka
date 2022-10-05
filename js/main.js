@@ -10,7 +10,7 @@
         // bigSectionsDestination: 'top',
         lazyLoading: true,
         // responsiveWidth: 1000,
-        responsiveHeight: 500,
+        responsiveHeight: 600,
         afterResponsive: function(isResponsive){
             //   animateAnchor: false,
 
