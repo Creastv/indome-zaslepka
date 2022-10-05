@@ -73,21 +73,32 @@ body {
 background: rgb(232,232,232);
 background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 100%);
 	display: flex;
-	/* align-items: center; */
+	align-items: center;
 	justify-content:space-between ;
 	padding: 20px;
 }
-#header .header-wraper .logo{
-	/* padding: 20px; */
-}
-
-#header .header-wraper a {
+#header .header-wraper .nav {
+	position: relative;
 	text-decoration: none;
 	 font-family: 'Mina', sans-serif;
 	font-size: 21px;
 	text-transform: uppercase;
 	color:#000;
-	
+}
+#header .header-wraper .nav:before{
+  content:"";
+  position:absolute;
+  color:#262626;
+  bottom:0;
+  left:0;
+  width:0%;
+  height: 1px;
+  background-color: #000;
+  overflow:hidden;
+  transition:all 0.5s;
+}
+#header .header-wraper .nav:hover:before{
+  width:100%;
 }
 /* slide */
 .section{
@@ -162,7 +173,8 @@ form .form-group input{
 	width: 100%;
 	padding: 10px;
 	border:none;
-	border-bottom:1px solid #000
+	border-bottom:1px solid #000;
+	outline: 0;
 }
 form .form-group .checkbox label{
 	display: flex;
@@ -171,9 +183,36 @@ form .form-group .checkbox label{
 form .form-group .checkbox input{
 	width: 24px;
 	margin: 10px;
+	outline: 0;
+}
+form .form-group input:focus{
+	border-bottom:1px solid green;
+}
+form .form-group.has-error input:focus{
+	border-bottom:1px solid green;
 }
 form .form-group .zgoda-visible{
 	font-size: 10px;
+}
+form .btn-wrap{
+	text-align: right;
+}
+form .btn-wrap .btn{
+	font-family: 'Mina', sans-serif;
+	font-size:16px;
+	text-transform: uppercase;
+	margin: 5px 0;
+	padding: 8px 50px;
+	background-color: #000;
+	color:#fff;
+	width: 100%;
+	border:none
+}
+[disabled="disabled"]{
+	opacity: 0.5;
+}
+form .has-error input, form .has-error select {
+    border-bottom: 1px solid red !important;
 }
 /* .has-error input{
 	border-bottom:3px solid red;
@@ -181,6 +220,12 @@ form .form-group .zgoda-visible{
 
 .section8 .row{
 	align-items:flex-start;
+}
+/* thx */
+.thx{
+	height: 100vh;
+	    display: flex;
+    align-items: center;
 }
  #footer{
 	bottom: 0;
@@ -200,21 +245,116 @@ form .form-group .zgoda-visible{
 	/* margin: 10px 0; */
 	padding: 5px 10px;
 	position: relative;
+	border-right: 1px solid #000;
+ }
+ #footer ul li:last-child{
+	border:none;
  }
 
-#footer ul li:after{
-	content: "";
-	position:absolute;
-	top: 0;
-	right: 0px;
-	width: 1px;
-	height: 100%;
-	background-color: rgba(0,0,0, 0.5);
- } 
- #footer ul li:last-child:after{
-	display: none;
- }
+#mouse-scroll {
+  style: block;
+}
+#mouse-scroll {
+  position: fixed;
+  margin: auto;
+  right: 20px;
+  bottom:20px;
+  -webkit-transform: translateX(-50%);
+  z-index: 9999;
+}
+#mouse-scroll span{
+  display: block;
+  width: 6px; 
+  height: 6px;
+  -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+       transform: rotate(45deg);
+       transform: rotate(45deg);
+  border-right: 2px solid #000; 
+  border-bottom: 2px solid #000;
+  margin: 0 0 3px 3px;
+}
+#mouse-scroll .mouse {
+  height: 40px;
+  width: 10px;
+  border-radius: 10px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid #000;
+  top: 170px;
+}
+#mouse-scroll .down-arrow-1 {
+  margin-top: 6px;
+}
+#mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
+  -webkit-animation: mouse-scroll 2s infinite; 
+    -moz-animation: mouse-scroll 2s infinite:
+}
+#mouse-croll .down-arrow-1 {
+   -webkit-animation-delay: .1s; 
+   -moz-animation-delay: .1s;
+   -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-2 {
+  -webkit-animation-delay: .2s; 
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-3 {
+   -webkit-animation-delay: .3s;
+   -moz-animation-dekay: .3s;
+   -webkit-animation-direction: alternate;
+}
+#mouse-scroll .mouse-in {
+  height: 5px;
+  width: 2px;
+  display: block; 
+  margin: 5px auto;
+  background: #000;
+  position: relative;
+}
+#mouse-scroll .mouse-in {
+ -webkit-animation: animated-mouse 2s ease infinite;
+  moz-animation: mouse-animated 2s ease infinite;
+}
 
+@-webkit-keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+     opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 1400px){
 	h2{
 		font-size: 38px;
@@ -301,7 +441,7 @@ form .form-group .zgoda-visible{
 	}
 }
 
-@media only screen and (max-height: 600px){
+@media only screen and (max-height: 500px){
 	.section{
 		padding: 50px 0 0;
 		height: initial!important;
