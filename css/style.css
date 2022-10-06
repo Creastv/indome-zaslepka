@@ -58,12 +58,7 @@ table {
 body {
   margin: 0;
   padding: 0;
-  /* font-family: 'Mina', sans-serif; */
   font-family: 'tw_cen_mtregular';
-  /* background-image: url(../img/bg.png);
-  background-position: bottom left;
-  background-repeat: no-repeat; */
-  
 }
 
 .fp-watermark{
@@ -77,12 +72,8 @@ body {
     width: 100%;
     z-index: 9;
 }
-#header{
 
-}
 #header .header-wraper{
-background: rgb(232,232,232);
-background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 100%);
 	display: flex;
 	align-items: center;
 	justify-content:space-between ;
@@ -112,13 +103,14 @@ background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 
 #header .header-wraper .nav:hover:before{
   width:100%;
 }
+
 /* slide */
 .section{
 	width: 100%;
 	height: 100%;
 }
 .container{
-	max-width: 998px;
+	max-width: 1100px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -136,7 +128,8 @@ background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 
 h2{
 	font-family: termina, sans-serif;
     font-weight: 700;
-	font-size: 41px;
+	font-size: 31px;
+	line-height: 35px;
 	margin-bottom: 35px;
 }
 p{
@@ -279,7 +272,7 @@ form .has-error input, form .has-error select {
 	color: #a9a9a9;
 }
 .section8 .col:nth-child(1){
-	margin-bottom: 60px;
+	margin-bottom: 63px;
 }
 /* thx */
 .thx{
@@ -290,8 +283,6 @@ form .has-error input, form .has-error select {
  #footer{
 	bottom: 0;
 	padding: 0;
-	background: rgb(235,235,235);
-	background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(255,255,255,0) 100%);
  }
 
  #footer ul{
