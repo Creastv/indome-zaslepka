@@ -140,7 +140,7 @@ h2{
 	margin-bottom: 35px;
 }
 p{
-	font-size: 16px;
+	font-size: 17px;
 	line-height: 26px;
 	margin-bottom: 15px;
 }
@@ -156,12 +156,12 @@ img{
 	padding-right: 50px;
 }
  h3{
-	font-family: 'Mina', sans-serif;
+	font-family: termina, sans-serif;
 	font-size: 21px;
 	margin-bottom: 15px;
 }
 .contact h4{
-	font-family: 'Mina', sans-serif;
+	font-family: termina, sans-serif;
 	font-size: 18px;
 	margin-bottom: 15px;
 }
@@ -172,12 +172,20 @@ img{
 	color:black;
 	text-decoration: none;
 }
-
+.more{
+	margin: 20px 0 15px 0;
+	display: inline-block;
+	text-decoration: none;
+	color:#000;
+	font-size: 15px;
+	font-family: termina, sans-serif;
+	font-weight: bold;
+}
 /* END slide */
 
 /* form */
 form{
-	padding: 0 15px;
+	padding: 015px;
 }
 form .form-group{
 	width: 100%;
@@ -237,7 +245,9 @@ form .has-error input, form .has-error select {
 	align-items:flex-end;
 }
 .section8 h3{
-	font-size: 31px;
+	font-family: termina, sans-serif;
+	    font-weight: 700;
+	font-size: 24px;
 	margin-bottom: 0;
 }
 .section8  .email a{
