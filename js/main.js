@@ -11,6 +11,12 @@
         lazyLoading: true,
         // responsiveWidth: 1000,
         responsiveHeight: 500,
+ onSlideLeave: function (anchorLink, index, slideIndex, direction) {
+  console.log(slideIndex, direction, anchorLink, index)
+            if (slideIndex === 1) {
+               alert('test')
+            }
+        }
 
     });
 
@@ -18,25 +24,8 @@
   $("#form").bootstrapValidator({
     container: "popover",
     message: "Pole wymagane!",
-    //live: 'submitted',
-    // feedbackIcons: {
-    //   valid: "glyphicon glyphicon-ok",
-    //   invalid: "glyphicon glyphicon-remove",
-    //   validating: "glyphicon glyphicon-refresh"
-    // },
-    // err: {
-    //   container: "tooltip"
-    // },
     fields: {
       firstname: {
-        message: "Pole wymagane!",
-        validators: {
-          notEmpty: {
-            message: "Pole wymagane!"
-          }
-        }
-      },
-      usluga: {
         message: "Pole wymagane!",
         validators: {
           notEmpty: {
@@ -82,3 +71,10 @@
     }
   });
 });
+
+
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        alert("you're at the bottom of the page");
+    }
+};

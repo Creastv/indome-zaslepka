@@ -1,3 +1,14 @@
+/* Termina Regular
+font-family: termina, sans-serif;
+font-weight: 400;
+font-style: normal;
+Termina Bold
+font-family: termina, sans-serif;
+font-weight: 700;
+font-style: normal;
+ */
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,10 +59,10 @@ body {
   margin: 0;
   padding: 0;
   /* font-family: 'Mina', sans-serif; */
-  font-family: "Montserrat", sans-serif;
-  background-image: url(../img/bg.png);
+  font-family: 'tw_cen_mtregular';
+  /* background-image: url(../img/bg.png);
   background-position: bottom left;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   
 }
 
@@ -80,7 +91,8 @@ background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 
 #header .header-wraper .nav {
 	position: relative;
 	text-decoration: none;
-	 font-family: 'Mina', sans-serif;
+	font-family: termina, sans-serif;
+    font-weight: 700;
 	font-size: 21px;
 	text-transform: uppercase;
 	color:#000;
@@ -113,15 +125,19 @@ background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 
 }
 .row{
 	display: flex;
+	flex-wrap:wrap;
 	align-items: center;
 	padding: 0px 20px;
+	
+	padding-right: 50px ;
 }
 .col{
 	width: 50%;
 }
 h2{
-	 font-family: 'Mina', sans-serif;
-	font-size: 51px;
+	font-family: termina, sans-serif;
+    font-weight: 700;
+	font-size: 41px;
 	margin-bottom: 35px;
 }
 p{
@@ -240,12 +256,16 @@ form .has-error input, form .has-error select {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
  }
 #footer ul li{
 	/* margin: 10px 0; */
-	padding: 5px 10px;
+	font-size: 10.5px;
+	padding: 5px 15px;
 	position: relative;
 	border-right: 1px solid #000;
+	letter-spacing: 1.5px;
  }
  #footer ul li:last-child{
 	border:none;
@@ -380,7 +400,6 @@ form .has-error input, form .has-error select {
 	#mouse-scroll {
 		bottom:100px
 	}
-	
 }
 @media only screen and (max-width: 460px){
 	body{
@@ -393,10 +412,6 @@ form .has-error input, form .has-error select {
 	.logo img {
 		width: 75px;
 		height: auto;
-	}
-	.row{
-		flex-wrap:wrap;
-		padding-right: 50px ;
 	}
 	.col{
 		width: 100%;
@@ -437,12 +452,6 @@ form .has-error input, form .has-error select {
 	}
 	#footer{
 		padding: 0;
-	}
-	#footer ul{
-		flex-wrap: wrap;
-	}
-	#footer ul li{
-		font-size: 12px;
 	}
 }
 
