@@ -89,6 +89,7 @@ background: linear-gradient(180deg, rgba(232,232,232,1) 0%, rgba(255,255,255,0) 
 	padding: 20px;
 }
 #header .header-wraper .nav {
+	padding-bottom: 5px;
 	position: relative;
 	text-decoration: none;
 	font-family: termina, sans-serif;
@@ -155,7 +156,7 @@ img{
 .contact{
 	padding-right: 50px;
 }
- h3{
+h3{
 	font-family: termina, sans-serif;
 	font-size: 21px;
 	margin-bottom: 15px;
@@ -166,6 +167,7 @@ img{
 	margin-bottom: 15px;
 }
 .contact a{
+	
 	font-size: 16px;
 	display: block;
 	margin-bottom: 10px;
@@ -173,7 +175,9 @@ img{
 	text-decoration: none;
 }
 .more{
+	position: relative;
 	margin: 20px 0 15px 0;
+	padding-bottom: 5px;
 	display: inline-block;
 	text-decoration: none;
 	color:#000;
@@ -181,11 +185,26 @@ img{
 	font-family: termina, sans-serif;
 	font-weight: bold;
 }
+.more:before{
+  content:"";
+  position:absolute;
+  color:#262626;
+  bottom:0;
+  left:0;
+  width:0%;
+  height: 1px;
+  background-color: #000;
+  overflow:hidden;
+  transition:all 0.5s;
+}
+.more:hover:before{
+	width: 100%;
+}
 /* END slide */
 
 /* form */
 form{
-	padding: 015px;
+	padding: 0 15px;
 }
 form .form-group{
 	width: 100%;
